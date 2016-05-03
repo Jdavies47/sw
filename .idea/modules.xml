@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/sw.iml" filepath="$PROJECT_DIR$/sw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Worksheet2-4/thread/01-sleep-and-work/01-sleep-and-work.iml" filepath="$PROJECT_DIR$/src/Worksheet2-4/thread/01-sleep-and-work/01-sleep-and-work.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/StarTreesGeneratorGUI/StarTreesGeneratorGUI.iml" filepath="$PROJECT_DIR$/src/StarTreesGeneratorGUI/StarTreesGeneratorGUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Week10 Term 1/Week10 Term 1.iml" filepath="$PROJECT_DIR$/src/Week10 Term 1/Week10 Term 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Week3 Term 1/Week3 Term 1.iml" filepath="$PROJECT_DIR$/src/Week3 Term 1/Week3 Term 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Week4 Term 1/Week4 Term 1.iml" filepath="$PROJECT_DIR$/src/Week4 Term 1/Week4 Term 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Week7 Term 1/Week7 Term 1.iml" filepath="$PROJECT_DIR$/src/Week7 Term 1/Week7 Term 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Week8 Term 1/Week8 Term 1.iml" filepath="$PROJECT_DIR$/src/Week8 Term 1/Week8 Term 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Week8 Term2/Week8 Term2.iml" filepath="$PROJECT_DIR$/src/Week8 Term2/Week8 Term2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Week9 Term 1/Week9 Term 1.iml" filepath="$PROJECT_DIR$/src/Week9 Term 1/Week9 Term 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Worksheet1-2/Worksheet1-2.iml" filepath="$PROJECT_DIR$/src/Worksheet1-2/Worksheet1-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Worksheet1-3/Worksheet1-3.iml" filepath="$PROJECT_DIR$/src/Worksheet1-3/Worksheet1-3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Worksheet1-4/Worksheet1-4.iml" filepath="$PROJECT_DIR$/src/Worksheet1-4/Worksheet1-4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Worksheet1-5/Worksheet1-5.iml" filepath="$PROJECT_DIR$/src/Worksheet1-5/Worksheet1-5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Worksheet2-1/Worksheet2-1.iml" filepath="$PROJECT_DIR$/src/Worksheet2-1/Worksheet2-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Worksheet2-2/Worksheet2-2.iml" filepath="$PROJECT_DIR$/src/Worksheet2-2/Worksheet2-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Worksheet2-3/Worksheet2-3.iml" filepath="$PROJECT_DIR$/src/Worksheet2-3/Worksheet2-3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Worksheet2-4/Worksheet2-4.iml" filepath="$PROJECT_DIR$/src/Worksheet2-4/Worksheet2-4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/athens-team-project/athens-team-project.iml" filepath="$PROJECT_DIR$/src/athens-team-project/athens-team-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/misc/src/misc.iml" filepath="$PROJECT_DIR$/src/misc/src/misc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Worksheet2-4/thread/thread.iml" filepath="$PROJECT_DIR$/src/Worksheet2-4/thread/thread.iml" />
     </modules>
   </component>
 </project>
