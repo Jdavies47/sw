@@ -1,0 +1,35 @@
+18/01
+list deleteDuplicate(inx, List l)
+pre1: x is an element of L
+& L is sorted
+-> empty list is ruled out
+
+pre2: result is sorted ascending
+& a copy of x has been removed
+
+List L: 2, 6, 8, 8, 20
+x = 8
+
+What should it be tested for?						expected
+	property					input		out
+#1	empty L(invalid)
+#2	L with 1 element				5/5		empty
+#3	L with x to be deleted form the front		2/2,5,7		5,7
+#4					middle		5/2,5,7		2,7
+#5					end		7/2,5,7		2,5
+#6 	L with multiple copies				7/7,7,7		7,7
+
+
+List delete (int x, List L){
+
+if(L.isEmpty()) {
+thrown an exception;
+} else { 
+		if(x==L.getHead()){
+			return L.getTail();
+		} else {
+			List R = delete (x, L.getTail());
+			return cons(L.getHead(), R);
+		}
+	}
+

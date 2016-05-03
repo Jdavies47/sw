@@ -1,0 +1,32 @@
+$ time java predictive.Sigs2WordsProto 4668663532876746738422559 4668663532876746738422559 4668663532876746738422559 4668663532876746738422559 4668663532876746738422559 4668663532876746738422559 4668663532876746738422559 4668663532876746738422559 4668663532876746738422559 4668663532876746738422559 
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+
+real	0m3.923s
+user	0m4.824s
+sys	0m0.232s
+
+$ time java predictive.Sigs2WordsList 4668663532876746738422559 4668663532876746738422559 4668663532876746738422559 4668663532876746738422559 4668663532876746738422559 4668663532876746738422559 4668663532876746738422559 4668663532876746738422559 4668663532876746738422559 4668663532876746738422559 
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+[immunoelectrophoretically]
+
+real	0m1.237s
+user	0m2.192s
+sys	0m0.292s
+
