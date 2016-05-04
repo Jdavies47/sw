@@ -10,7 +10,6 @@ public class Transactions {
 	
 	// CONSTRUCTOR
 
-
 	/**
 	 * @return the dayOfYear
 	 */
@@ -24,7 +23,7 @@ public class Transactions {
 	 * @param amount
 	 * @param balance
 	 */
-	public Transaction(int dayOfYear, String typeOfTransaction, long amount, long balance) {
+	public Transactions(int dayOfYear, String typeOfTransaction, long amount, long balance) {
 		super();
 		this.dayOfYear = dayOfYear;
 		this.typeOfTransaction = typeOfTransaction;
@@ -52,5 +51,4 @@ public class Transactions {
 	public long getBalance() {
 		return balance;
 	}
-	
 }

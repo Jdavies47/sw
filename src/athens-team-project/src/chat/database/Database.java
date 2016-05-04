@@ -4,6 +4,7 @@ import chat.Message;
 import chat.User;
 import chat.interfaces.DatabaseImpl;
 
+import java.sql.*;
 import java.util.ArrayList;
 
 /**

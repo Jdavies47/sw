@@ -1,15 +1,17 @@
 package LabLecture;
 
-import Observable;
+import java.util.Observable;
 
 public class TemperatureModel extends Observable {
+
+	Temperature temp;
 
 	public TemperatureModel(Temperature temp){
 		super();
 		this.temp = temp;
 	}
 	
-	public double getCelcius(){
+	public double getCelsius(){
 		return temp.getCelsius();
 	}
 	

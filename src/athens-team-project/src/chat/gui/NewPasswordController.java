@@ -126,10 +126,11 @@ public class NewPasswordController extends JDialog implements ActionListener{
 			}
 			else {
 				try {
-				response = pwmodel.changePassword(client.getUsername(), new String(oldPasswordText.getPassword()), new String(newPasswordText.getPassword()));
+					response = pwmodel.changePassword(client.getUsername(), new String(oldPasswordText.getPassword()), new String(newPasswordText.getPassword()));
+				} catch (IOException e1) {
+					e1.printStackTrace();
 				}
-				catch(IOException f) {}
-				
+
 				if (response == 1) {
 					JOptionPane.showMessageDialog(this, "Password change successful!");
 					this.dispose();

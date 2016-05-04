@@ -3,6 +3,8 @@ package chat.gui;
 
 import chat.model.RegisterModel;
 
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -103,18 +105,20 @@ public class RegisterController extends JDialog implements ActionListener {
 			}
 
 			String nickname = nicknameText.getText();
-			
-			try {
-				if(universityIDText.getText() == ""){
-				JOptionPane.showMessageDialog(this, "Must enter a valid university ID");
-				}else if(passwordString == ""){
-				JOptionPane.showMessageDialog(this, "Password can't be empty");
-				}else if(nicknameText.getText() == ""){
-				JOptionPane.showMessageDialog(this, "Nickname can't be empty");
-				}else
-				response = registerModel.register(username, nickname, passwordString);
-			} catch (IOException f) {}
-			
+
+			if(universityIDText.getText() == ""){
+            JOptionPane.showMessageDialog(this, "Must enter a valid university ID");
+            }else if(passwordString == ""){
+            JOptionPane.showMessageDialog(this, "Password can't be empty");
+            }else if(nicknameText.getText() == ""){
+            JOptionPane.showMessageDialog(this, "Nickname can't be empty");
+            }else
+				try {
+					response = registerModel.register(username, nickname, passwordString);
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				}
+
 			if (response == 2) {
 			  	JOptionPane.showMessageDialog(this, "Invalid User");
 			}

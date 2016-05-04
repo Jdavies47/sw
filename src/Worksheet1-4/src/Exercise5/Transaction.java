@@ -1,5 +1,7 @@
 package Exercise5;
 
+import java.util.Date;
+
 /**
  *  A Transaction is characterized by the fields amount, the transaction type
  *  <pre>

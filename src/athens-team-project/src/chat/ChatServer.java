@@ -324,8 +324,8 @@ public class ChatServer {
                                     if (database.isExistUser(username)) {
                                     	//String randomString=security.randomString(20);
                                     	//System.out.println(randomString);
-                				String randomString=AutoEmail.sendRandomString(username+"@student.bham.ac.uk");
-                				response("7" + "res" + "1" + "1" + randomString);
+//                				String randomString=AutoEmail.sendRandomString(username+"@student.bham.ac.uk");
+//                				response("7" + "res" + "1" + "1" + randomString);
                                     } else
                                         response("7" + "res" + "1" + "0");
                                 } else if (content.charAt(0) == '2') {

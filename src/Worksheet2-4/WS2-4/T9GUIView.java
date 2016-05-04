@@ -202,7 +202,7 @@ public class T9GUIView extends JFrame implements Observer {
     }
 
     /**
-     * Sets up numeric key actions & buttons
+     * Sets up numeric keys & buttons
      */
     public void setUpActions() {
         for (int j = 0; j < 12; j++) {

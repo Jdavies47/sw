@@ -1,6 +1,7 @@
 package Graphics2DLecture;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  *  Class to display some Rectangles and Ovals

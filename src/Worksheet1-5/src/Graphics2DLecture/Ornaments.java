@@ -1,6 +1,7 @@
 package Graphics2DLecture;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  *  Class to display three objects of class RegularPolygon which are

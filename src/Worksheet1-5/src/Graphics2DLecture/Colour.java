@@ -13,6 +13,7 @@ package Graphics2DLecture;
  */
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Colour extends JPanel{
 

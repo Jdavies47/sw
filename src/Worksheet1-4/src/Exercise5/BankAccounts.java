@@ -1,5 +1,8 @@
 package Exercise5;
 
+import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 import java.util.regex.Pattern;
 
 /** This is a preliminary version of the BankAccounts class, however,

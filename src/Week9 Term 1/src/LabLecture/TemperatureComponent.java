@@ -34,13 +34,13 @@ public class TemperatureComponent extends JPanel {
 		slider.setLabelTable(slider.createStandardLabels((max - min) / 4));
 
 		// create listener
-		SliderListener listen = new SliderListener(model, slider);
+//		SliderListener listen = new SliderListener(model, slider);
 
 		// make listeners listen to controls
-		slider.addChangeListener(listen);
+//		slider.addChangeListener(listen);
 
 		// place views and controls on panel
-		add(celsius);
+//		add(celsius);
 		add(slider); // Slider in the middle
 		/* add(fahrenheit); */ // Celsius degrees lowest
 	}

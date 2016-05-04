@@ -5,7 +5,9 @@
  * (matrix) and performs some simple image manipulation on them, the output of which is presented on the console.
  */
 
+import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.Scanner;
 
 public class PGMImage {
 

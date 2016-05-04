@@ -4,6 +4,9 @@ import chat.Client;
 import chat.Message;
 import chat.User;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;

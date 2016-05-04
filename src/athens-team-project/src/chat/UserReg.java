@@ -2,6 +2,8 @@ package chat;
 
 import chat.database.SetUpDBConnection;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.sql.Connection;

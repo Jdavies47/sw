@@ -1,10 +1,8 @@
+import javax.swing.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-
-import javax.swing.JFrame;
-import javax.swing.UIManager;
 
 /*
  * Created on Aug 6, 2003
@@ -52,7 +50,7 @@ public class Main {
 	    // Use the default
 	}
 
-	JFrame frame = new MainFrame();
-	frame.show();
+//	JFrame frame = new MainFrame();
+//	frame.show();
     }
 }

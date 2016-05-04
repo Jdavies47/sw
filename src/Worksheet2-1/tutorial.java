@@ -8,16 +8,16 @@
 	*/
 
 
-	static Tree negateAll(Tree a){
-		if (Tree.isEmpty()){
-			return Tree.empty();
-		} else {
-			return createNode(-a.root(), negateAll(a.Left, negateAll(a.Right)));
-		}
-	}
-
-	static boolean isSearchTree(Tree a){
-		if (Tree.isEmpty()){
-			return true;
-		} else if (
-	}
+//	static Tree negateAll(Tree a){
+//		if (Tree.isEmpty()){
+//			return Tree.empty();
+//		} else {
+//			return createNode(-a.root(), negateAll(a.Left, negateAll(a.Right)));
+//		}
+//	}
+//
+//	static boolean isSearchTree(Tree a){
+//		if (Tree.isEmpty()){
+//			return true;
+//		} else if (
+//	}

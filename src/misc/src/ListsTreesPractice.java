@@ -115,19 +115,23 @@ public class ListsTreesPractice implements ListInterface, TreeInterface {
         } else if (t.getLeft().getEmpty() && t.getRight().getEmpty()) {
             return List.cons(t.getValue(), List.empty());
         } else {
-            return ListOps.append(sortedList(t.getLeft()), List.cons(t.getValue(), sortedList(t.getRight())));
+            return sortHelper(sortedList(t.getLeft()), List.cons(t.getValue(), sortedList(t.getRight())));
         }
-
     }
 
+    public static List sortHelper(List a, List b) {
+        if (a.isEmpty() && !b.isEmpty()) {
+            return b;
+        } else if (!a.isEmpty() && b.isEmpty()) {
+            return a;
+        } else {
+            return List.cons(a.getHead(), sortHelper(a.getTail(), b));
+        }
+    }
+
+
     public static void main(String[] args) {
-        Tree t1 = new Tree(30, new Tree(20, new Tree(15, new Tree(13),
-                new Tree(18)), new Tree(25, new Tree(23), new Tree(27,
-                new Tree(26), new Tree(28)))), new Tree(50, new Tree(40,
-                new Tree(35), new Tree(42)), new Tree(55, new Tree(52),
-                new Tree(58))));
-        System.out.println(t1);
-        System.out.println(sortedList(t1));
+
 
     }
 }
