@@ -2,16 +2,12 @@
 //	if(T.isEmpty()){
 //		return new Tree(x);
 //	} else {
-//		if(x == a){
+//		if(x == T.getValue()){
 //			return T;
-//		} else if(x < a){
-//			Tree L = T.getLeft;
-//			Tree R = T.getRight;
-//			return new Tree (a, treeInsert(x,L), R);
+//		} else if(x < T.getValue()){
+//			return new Tree (T.getValue(), treeInsert(x,T.getLeft()), T.getRight());
 //		} else {
-//			Tree L = T.getLeft;
-//			Tree R = T.getRight;
-//			return new Tree (a, TreeInsert(x,R), L);
+//			return new Tree (T.getValue(), TreeInsert(x,T.getRight()), T.getLeft());
 //		}
 //}
 // efficiency: the algorithm travels down only one side ~ hopefully log2N

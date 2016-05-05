@@ -5,8 +5,6 @@ import java.awt.*;
 import java.util.ArrayList;
 
 /**
- * TREES
- *
  * @author Zsolt Pazmandy 1600690 Computer Science MSc 2015/16
  *         Software Workshop Worksheet 5 Exercise 2
  *         The program takes in coordinates of the top left pixel of bounding boxes of

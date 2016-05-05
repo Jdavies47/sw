@@ -129,10 +129,8 @@ public class ListsTreesPractice implements ListInterface, TreeInterface {
         }
     }
 
-
     public static void main(String[] args) {
-
-
+        Tree t = new Tree(1, new Tree(), new Tree());
     }
 }
 

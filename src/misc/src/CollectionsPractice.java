@@ -67,7 +67,7 @@ public class CollectionsPractice {
 
         @Override
         public int compareTo(Name that) {
-            return this.firstName.compareTo(that.firstName);
+            return this.lastName.compareTo(that.lastName);
         }
     }
 
