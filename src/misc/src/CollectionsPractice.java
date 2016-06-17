@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by Zsolt Pazmandy on 04/05/16.
@@ -16,9 +17,9 @@ public class CollectionsPractice {
      * [3%]
      */
 
-    public static HashSet<Integer> mySet() {
+    public static Set<Integer> mySet() {
 
-        HashSet<Integer> result = new HashSet<>();
+        Set<Integer> result = new HashSet<>();
         result.add(1);
         result.add(4);
         result.add(6);

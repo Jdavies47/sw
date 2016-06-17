@@ -13,8 +13,8 @@ public class db_mark_calc {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
-        int ca1 = 83;
-        int ca2 = 78;
+        int ca1 = 72;
+        int ca2 = 72;
         int exam;
         System.out.print("enter exam results: ");
         exam = Integer.parseInt(in.nextLine());

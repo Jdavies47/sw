@@ -129,10 +129,26 @@ public class ListsTreesPractice implements ListInterface, TreeInterface {
         }
     }
 
+    public static boolean isBST(Tree t) {
+        if (t.getEmpty() || t.getHeight() == 1) {
+            return true;
+        } else if (!t.getLeft().getEmpty() && t.getRight().getEmpty()) {
+            return isBST(t.getLeft());
+        } else if (t.getLeft().getEmpty() && !t.getRight().getEmpty()) {
+            return isBST(t.getRight());
+        } else if (t.getLeft().getValue() < t.getValue() && t.getRight().getValue() > t.getValue()) {
+            return true && isBST(t.getLeft()) && isBST(t.getRight());
+        } else {
+            return false;
+        }
+    }
+
     public static void main(String[] args) {
-        Tree t = new Tree(1, new Tree(), new Tree());
+
     }
 }
+
+
 
 
 

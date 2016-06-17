@@ -70,6 +70,8 @@ public class Worksheet2 implements Worksheet2Interface {
     /**
      * EXERCISE 5
      *
+     * revised: 16.05.2016
+     *
      * Returns true if the input tree is a valid Binary Search Tree (BST). The tree's BST property is
      * evaluated by checking if:
      *      - the tree is empty - true;
@@ -85,23 +87,38 @@ public class Worksheet2 implements Worksheet2Interface {
      *      OR if the smallest element of the right subtree is smaller than or equal to the root node - false;
      *      OR if both the left and the right subtrees are valid search trees
      *
+     * Original version commented out
+     *
      * @param a input tree
      * @return true if the input tree is a valid BST
      */
     public static boolean isSearchTree(Tree a) {
-        if (a.getEmpty() ||
-                (a.getRight().getEmpty() && a.getLeft().getEmpty() && !a.getEmpty()) ||
-                (a.getRight().getEmpty() && !a.getLeft().getEmpty() && !a.getEmpty()) && isSearchTree(a.getLeft()) ||
-                (!a.getRight().getEmpty() && a.getLeft().getEmpty() && !a.getEmpty() && isSearchTree(a.getRight()))
-                ) {
+//        if (a.getEmpty() ||
+//                (a.getRight().getEmpty() && a.getLeft().getEmpty() && !a.getEmpty()) ||
+//                (a.getRight().getEmpty() && !a.getLeft().getEmpty() && !a.getEmpty()) && isSearchTree(a.getLeft()) ||
+//                (!a.getRight().getEmpty() && a.getLeft().getEmpty() && !a.getEmpty() && isSearchTree(a.getRight()))
+//                ) {
+//            return true;
+//        } else if (!a.getLeft().getEmpty() && a.getLeft().getValue() >= a.getValue() ||
+//                !a.getRight().getEmpty() && a.getValue() >= a.getRight().getValue() ||
+//                max(a.getLeft()) >= a.getValue() ||
+//                min(a.getRight()) <= a.getValue()) {
+//            return false;
+//        } else {
+//            return isSearchTree(a.getLeft()) && isSearchTree(a.getRight());
+//        }
+
+        // updated version, less clutter & unnecessary basecases
+        if (a.getEmpty() || a.getHeight() == 1) {
             return true;
-        } else if (!a.getLeft().getEmpty() && a.getLeft().getValue() >= a.getValue() ||
-                !a.getRight().getEmpty() && a.getValue() >= a.getRight().getValue() ||
-                max(a.getLeft()) >= a.getValue() ||
-                min(a.getRight()) <= a.getValue()) {
-            return false;
+        } else if (!a.getLeft().getEmpty() && a.getRight().getEmpty()) {
+            return isSearchTree(a.getLeft());
+        } else if (a.getLeft().getEmpty() && !a.getRight().getEmpty()) {
+            return isSearchTree(a.getRight());
+        } else if (a.getLeft().getValue() < a.getValue() && a.getRight().getValue() > a.getValue()) {
+            return true && isSearchTree(a.getLeft()) && isSearchTree(a.getRight());
         } else {
-            return isSearchTree(a.getLeft()) && isSearchTree(a.getRight());
+            return false;
         }
     }
 //    /**
