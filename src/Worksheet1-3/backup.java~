@@ -1,0 +1,265 @@
+import java.io.*;
+import java.util.*;
+import java.nio.file.Paths;
+
+public class PGMImage {
+
+	private int width, height, maxShade;
+	private String fileType;
+	private static int[][] pixels;
+	private static String fileName;
+	private static Scanner input;
+
+	public PGMImage(String fileName) throws IOException {
+		super();
+			
+			input = new Scanner(Paths.get(fileName));
+			
+			fileType = input.nextLine();
+			width = input.nextInt();
+			height = input.nextInt();
+			maxShade = input.nextInt();
+			
+			int[][] pixels = new int[height][width];
+			
+			for (int x = 0; x < height; x++) {
+				for (int y = 0; y < width; y++) {
+					pixels[x][y] = input.nextInt();
+				}
+			}
+		}
+
+	
+	public static int[][] getPixels() {
+		return pixels;
+	}
+	
+	public void setPixels(int[][] pixels) {
+		this.pixels = pixels;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+	public int getMaxShade() {
+		return maxShade;
+	}
+
+	public void setMaxShade(int maxShade) {
+		this.maxShade = maxShade;
+	}
+
+	public String getFileType() {
+		return fileType;
+	}
+
+	public void setFileType(String fileType) {
+		this.fileType = fileType;
+	}
+
+	public static String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+	
+	
+	// method to output shade values in file
+	public void display() {
+
+		for (int i = 0; i < getHeight(); i++) {
+			for (int j = 0; j < getWidth(); j++) {
+				System.out.println(pixels[i][j]);
+			}
+		}
+	}
+
+	// method to invert colours
+	public void invert() throws IOException {
+		int[] shade = new int[getWidth() * getHeight()];
+
+		for (int i = 0; i < getHeight(); i++) {
+			for (int j = 0; j < getWidth(); j++) {
+				shade[i + j] = pixels[i][j];
+				if (shade[i + j] >= 128) {
+					shade[i + j] = 255 - shade[i + j];
+				} else {
+					int tmp = 128 - shade[i + j];
+					shade[i + j] = 128 + tmp;
+				}
+				System.out.println(shade[i + j]);
+			}
+		}
+	}
+
+	// method to rotate image by 90 degrees clockwise
+	public void rotateClockwise() throws IOException {
+		
+//		int[][] rotated = new int[getHeight()][getWidth()];
+		
+//		System.out.println(in.readLine());
+		
+//		int x = 0;
+//		int y = 0;
+		
+//		for (int i = 0; i < getWidth(); i++) {
+//			for (int j = 0; j < getHeight(); j++) {
+//				rotated[i][j] = PGMImage.input.nextInt();
+//				System.out.println(rotated[i][j]);
+//			}
+//		}
+	}
+
+	public static void main(String[] args) throws IOException {
+
+		PGMImage photo = new PGMImage("image.pgm");
+		System.out.println(photo.getFileType());
+		System.out.println(photo.getWidth());
+		System.out.println(photo.getHeight());
+		System.out.println(photo.getMaxShade());
+		photo.display();
+		photo.invert();
+		photo.rotateClockwise();
+
+	}
+
+}
+// // variables
+// int width, height, maxShade;
+// int[] shade = new int[maxShade];
+// static Scanner input;
+// String fileType;
+// static String filename;
+//
+// // constructor
+// public PGMImage(String filename) throws IOException {
+// try {
+// PGMImage.filename = filename;
+// this.input = new Scanner(Paths.get(PGMImage.filename));
+// this.fileType = input.next();
+// this.width = input.nextInt();
+// this.height = input.nextInt();
+// this.maxShade = input.nextInt();
+//
+// int[] shade = new int[width * height];
+//
+// for (int i = 0; i < width; i++) {
+// for (int j = 0; j < height; j++) {
+// shade[i + j] = input.nextInt();
+// }
+// }
+// } catch (IOException e) {
+// // filling the image with white pixels (maxShade = 255)
+// System.out.println("File doesn't exist. Colouring pixels white. ");
+// for (int i = 0; i < width; i++) {
+// for (int j = 0; j < height; j++) {
+// shade[i + j] = 255;
+// }
+// }
+// }
+// input.close();
+// }
+//
+//// method to invert colours
+// public void invert() throws IOException {
+// System.out.println("INVERTING COLOURS");
+// input = new Scanner(Paths.get(PGMImage.filename));
+// fileType = input.next();
+// width = input.nextInt();
+// height = input.nextInt();
+// maxShade = input.nextInt();
+// int[] shade = new int[width * height];
+//
+// for (int i = 0; i < width; i++) {
+// for (int j = 0; j < height; j++) {
+// shade[i + j] = input.nextInt();
+//// System.out.println("original value: " + shade[i+j]);
+// if (shade[i + j] >= 128) {
+// shade[i + j] = 255 - shade[i + j];
+// } else {
+// int tmp = 128 - shade[i + j];
+// shade[i + j] = 128 + tmp;
+// }
+// System.out.println(shade[i + j]);
+// }
+// }
+// input.close();
+// }
+//
+// // method to rotate image clockwise by 90
+// public void rotateClockwise() throws IOException {
+// int[][] pixels = new int[height][width];
+// input = new Scanner(Paths.get(PGMImage.filename));
+// fileType = input.next();
+// width = input.nextInt();
+// height = input.nextInt();
+// maxShade = input.nextInt();
+// int[][] rotated = new int[width][height];
+// int[][] temp = new int[width][height];
+// int x = 0;
+// int y = 0;
+// int i = 0;
+// int j = 0;
+//
+// for (i = 0; i < width+1; i++) {
+// for (j = 0; j < height+1; j++) {
+// shade[width * height] = input.nextInt();
+// }
+// }
+//
+// for (i = width * height; i == 0;){
+// if(shade[width+height]!=width){
+// i--;
+// }
+// else
+// shade[width+height]=rotated[0][width-1];
+// }
+//
+// // image header begins
+// System.out.println(fileType);
+// System.out.print(width + " ");
+// System.out.println(height);
+// System.out.println(maxShade);
+// // image header over
+//
+// // assigning shade values to pixels[height][width]
+//
+// // for (x = 0; x < height; x++) {
+// // for (y = 0; y < width; y++) {
+// // pixels[x][y] = input.nextInt();
+// // rotated[i][j] = pixels[x][y];
+// //
+// // }
+// // }
+//
+// for (i = 0; i < width; i++) {
+// for (j = 0; j < height; j++) {
+// System.out.println(rotated[i][j]);
+// }
+// }
+//
+// }
+//
+// public static void main(String[] args) throws IOException {
+//
+// PGMImage photo = new PGMImage("image.pgm");
+// // photo.invert();
+// photo.rotateClockwise();
+//
+// }
+// }
